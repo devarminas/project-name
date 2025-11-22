@@ -1,0 +1,27 @@
+
+### Get all todos
+GET http://localhost:3000/todos
+
+@todoId=f20e160a-08f4-4ee5-8757-2df3ef4603ea
+
+### Get todo by id
+GET http://localhost:3000/todos/{{todoId}}
+
+### Create todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "description": "Buy milk"
+}
+
+### Update todo (partial)
+PUT http://localhost:3000/todos/{{todoId}}
+Content-Type: application/json
+
+{
+  "done": true
+}
+
+### Delete todo
+DELETE http://localhost:3000/todos/{{todoId}}
